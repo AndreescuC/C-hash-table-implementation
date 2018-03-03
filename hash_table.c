@@ -24,7 +24,7 @@ void executeInstruction(instruction inst, bucket ***hashTable, int size)
 	printHashTablee(*hashTable, size);
 	char buf[12];
 	int i;
-	for (i=0; i<2; i++) {
+	for (i=0; i<10; i++) {
 		printHashTablee(*hashTable, size);
 		printf("Acii\n");
 		bucket* newElement;
@@ -33,7 +33,8 @@ void executeInstruction(instruction inst, bucket ***hashTable, int size)
 		strcpy(newElement->word, buf);
 		newElement->next = NULL;
 		printf("Ma uit pe poz %d\n", i % 5);
-		bucket *puppet = *hashTable[i % 5];
+		bucket *puppet;
+		puppet = (*hashTable)[i % 5];
 		printf("Uite: %s\n", puppet->word);
 		if (puppet->word == NULL) {
 			printf("New element\n");
