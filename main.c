@@ -1,11 +1,9 @@
 #include "header.h"
 
-void printInstructions(instruction *head, int n);
-
 int main(int argc, char *argv[])
 {
 	int i;
-	bucket *hashTable;
+	bucket **hashTable;
 	int hashTableSize = atoi(argv[1]);
 	if (hashTableSize == 0) {
 		handleFatalError(CODE_INVALID_HASHTABLE_SIZE, 0);
@@ -14,21 +12,37 @@ int main(int argc, char *argv[])
 	hashTable = malloc(hashTableSize * sizeof(bucket));
 	instruction *instructions;
 	int nrOfInstructions = readInstructions(&instructions, argv[2]);
-	// printInstructions(instructions, nrOfInstructions);
+	printInstructions(instructions, nrOfInstructions);
 
-	// for (i=0; i<nrOfInstructions; i++) {
-	// 	executeInstruction();
-	// }
+	/*for (i=0; i<nrOfInstructions; i++) {
+		executeInstruction(instructions[i], &hashTable, &hashTableSize);	
+		printHashTable(hashTable, hashTableSize);
+	}*/
+	char buf[12];
+	for (i=0; i<14; i++) {
+
+		bucket* newElement;
+		newElement = (bucket*)malloc(sizeof(bucket));
+		sprintf(buf, "dest%d", i);
+		strcpy(newElement->word, buf);
+		newElement->next = NULL;
+		bucket *puppet = hashTable[i % 5];
+
+		if (puppet == NULL) {
+			newElement->prev = NULL;	
+			hashTable[i % 5] = newElement;
+			continue;
+		}
+		while (puppet->next != NULL) {
+			puppet = puppet->next;
+		}
+		newElement->prev = puppet;
+		puppet->next = newElement;
+	
+	}
+	//printHashTable(hashTable, hashTableSize);
+	executeInstruction(instructions[i], &hashTable, hashTableSize);
+	//printHashTable(hashTable, hashTableSize);
 
 	return 0;
-}
-
-void printInstructions(instruction *head, int n)
-{
-	int i;
-	printf("\n*************************PRINTING INSTRUCTIONS*************************\n");
-	for (i=0; i<n; i++) {
-		printf("%s-%s-%s\n", commandNames[head[i].command], head[i].arg1, head[i].arg2);
-	}
-	printf("*************************PRINTING INSTRUCTIONS*************************\n\n");
 }

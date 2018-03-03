@@ -9,7 +9,7 @@ static const char MSG_INVALID_FILENAME[] = "Invalid input filename provided";
 static const char MSG_INVALID_INSTRUCTION[] = "Invalid instruction provided";
 
 typedef struct bucket {
-	char value[100];
+	char word[100];
 	struct bucket *next;
 	struct bucket *prev;
 }bucket;

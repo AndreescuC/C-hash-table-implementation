@@ -16,7 +16,7 @@ int readInstructions(instruction **originalInstructions, char *filename)
 	if (fd == NULL) {
 		handleFatalError(CODE_INVALID_FILENAME, 0);
 	}
-	printf("Opening file with descriptor %d for reading...\n", fd);
+	
 	while (fgets(line, sizeof(line), fd)) {
 		token = strtok(line, " \n");
 		instruction currentInstruction;
