@@ -1,4 +1,4 @@
-void printHashTable(bucket **hashTable, int size);
+#include "debugging_aux.h"
 
 void printInstructions(instruction *head, int n)
 {
@@ -14,7 +14,7 @@ void printHashTable(bucket **hashTable, int size)
 {
 	int i;
 	bucket *puppet;
-	printf("\n*************************PRINTING HASHTABLE*************************\n");
+	printf("\n*************************PRINTING HASHTABLE*************************");
 	for (i=0; i<size; i++) {
 		puppet = hashTable[i];
 		while (puppet != NULL) {
@@ -23,5 +23,5 @@ void printHashTable(bucket **hashTable, int size)
 		}
 		printf("\n");
 	}
-	printf("*************************PRINTING HASHTABLE*************************\n\n");
+	printf("*************************PRINTING HASHTABLE*************************\n");
 }

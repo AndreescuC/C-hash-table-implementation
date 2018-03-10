@@ -1,4 +1,9 @@
-const char* commandNames[] = {"add", "remove", "find", "print", "bprint", "resize", "invalid" };
+#include "std.h"
+
+#ifndef TEMA1_STRUCT_H
+#define TEMA1_STRUCT_H
+
+static const char* commandNames[] = {"add", "remove", "find", "print", "bprint", "resize", "invalid" };
 
 static const int CODE_INVALID_HASHTABLE_SIZE = 0;
 static const int CODE_INVALID_FILENAME = 1;
@@ -9,24 +14,19 @@ static const char MSG_INVALID_FILENAME[] = "Invalid input filename provided";
 static const char MSG_INVALID_INSTRUCTION[] = "Invalid instruction provided";
 
 typedef struct bucket {
-	char word[100];
-	struct bucket *next;
-	struct bucket *prev;
+    char word[100];
+    struct bucket *next;
+    struct bucket *prev;
 }bucket;
 
-typedef enum command {ADD, REMOVE, FIND, PRINT, BPRINT, RESIZE, INVALID_COMMAND}command;
+typedef enum command {ADD, REMOVE, FIND, CLEAR, PRINT, BPRINT, RESIZE, INVALID_COMMAND}command;
 
 typedef struct instruction {
-	enum command command;
-	char arg1[10];
-	char arg2[10];
+    enum command command;
+    char arg1[10];
+    char arg2[50];
 }instruction;
 
-instruction initializeInstruction()
-{
-	instruction in;
-	in.command = INVALID_COMMAND;
-	strcpy(in.arg1, "arg1");
-	strcpy(in.arg2, "arg2");
-	return in;
-}
+instruction initializeInstruction();
+
+#endif

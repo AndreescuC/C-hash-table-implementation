@@ -1,6 +1,4 @@
-int readInstructions(instruction **instructions, char *filename);
-command getCommandType(char *cmdString);
-void printInstructions(instruction *head, int n);
+#include "io_aux.h"
 
 int readInstructions(instruction **originalInstructions, char *filename)
 {
@@ -19,8 +17,8 @@ int readInstructions(instruction **originalInstructions, char *filename)
 	
 	while (fgets(line, sizeof(line), fd)) {
 		token = strtok(line, " \n");
+
 		instruction currentInstruction;
-		currentInstruction = initializeInstruction();
 		currentInstruction.command = getCommandType(token);
 		if (currentInstruction.command == INVALID_COMMAND) {
 			handleFatalError(CODE_INVALID_INSTRUCTION, lineNumber);
@@ -34,7 +32,7 @@ int readInstructions(instruction **originalInstructions, char *filename)
 			}
 		}
 		if (lineNumber >= currentSize) {
-			instructions = realloc(instructions, currentSize + reallocationIncrement);
+			instructions = realloc(instructions, (size_t)(currentSize + reallocationIncrement));
 		}
 		instructions[lineNumber - 1] = currentInstruction;
 		lineNumber++;

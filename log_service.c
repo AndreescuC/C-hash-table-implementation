@@ -1,7 +1,6 @@
-void handleFatalError(int code, int line);
-void logMessage(const char *msg, int line);
+#include "log_service.h"
 
-void handleFatalError(int code, int line) 
+void handleFatalError(int code, int line)
 {
 	if (code == CODE_INVALID_HASHTABLE_SIZE) {
 		logMessage(MSG_INVALID_HASHTABLE_SIZE, line);
@@ -10,6 +9,8 @@ void handleFatalError(int code, int line)
 	} else if (code == CODE_INVALID_INSTRUCTION) {
 		logMessage(MSG_INVALID_INSTRUCTION, line);
 	}
+	char *c;
+	gets(c);
 	exit(0);
 }
 
