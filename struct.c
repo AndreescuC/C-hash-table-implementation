@@ -4,7 +4,7 @@ instruction initializeInstruction()
 {
 	instruction in;
 	in.command = INVALID_COMMAND;
-	strcpy(in.arg1, "arg1");
-	strcpy(in.arg2, "arg2");
+	in.arg1[0] = NULL;
+	in.arg1[0] = NULL;
 	return in;
 }

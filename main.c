@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
 	if (hashTableSize == 0) {
 		handleFatalError(CODE_INVALID_HASHTABLE_SIZE, 0);
 	}
-	printf("Allocationg %d...\n", hashTableSize);
 	hashTable = malloc(hashTableSize * sizeof(bucket));
 	instruction *instructions;
 	int nrOfInstructions = readInstructions(&instructions, argv[2]);
@@ -47,9 +46,7 @@ int main(int argc, char *argv[])
 
 	for (i=0; i<nrOfInstructions; i++) {
 		executeInstruction(instructions[i], &hashTable, hashTableSize);
-		printHashTable(hashTable, hashTableSize);
 	}
-	char buf[12];
 
     char *c;
     gets(c);

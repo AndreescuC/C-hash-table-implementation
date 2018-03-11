@@ -12,16 +12,18 @@ void printInstructions(instruction *head, int n)
 
 void printHashTable(bucket **hashTable, int size)
 {
-	int i;
+	int i, count;
 	bucket *puppet;
-	printf("\n*************************PRINTING HASHTABLE*************************");
+	printf("*************************PRINTING HASHTABLE*************************\n");
 	for (i=0; i<size; i++) {
+		count = 0;
 		puppet = hashTable[i];
 		while (puppet != NULL) {
+			count ++;
 			printf("%s -> ", puppet->word);
 			puppet = puppet->next;
 		}
-		printf("\n");
+		printf(" [%d elements]\n", count);
 	}
 	printf("*************************PRINTING HASHTABLE*************************\n");
 }

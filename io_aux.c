@@ -18,7 +18,7 @@ int readInstructions(instruction **originalInstructions, char *filename)
 	while (fgets(line, sizeof(line), fd)) {
 		token = strtok(line, " \n");
 
-		instruction currentInstruction;
+		instruction currentInstruction = initializeInstruction();
 		currentInstruction.command = getCommandType(token);
 		if (currentInstruction.command == INVALID_COMMAND) {
 			handleFatalError(CODE_INVALID_INSTRUCTION, lineNumber);
@@ -47,17 +47,25 @@ command getCommandType(char *cmdString)
 
 	if (strcmp(cmdString, "add") == 0) {
 		cmd = ADD;
-	} else if (strcmp(cmdString, "remove") == 0) {
+	} else if (strcmp(cmdString, "remove") == 0
+               || strcmp(cmdString, "remove\r") == 0) {
 		cmd = REMOVE;
-	} else if (strcmp(cmdString, "print") == 0) {
+	} else if (strcmp(cmdString, "print") == 0
+               || strcmp(cmdString, "print\r") == 0) {
 		cmd = PRINT;
-	} else if (strcmp(cmdString, "find") == 0) {
+	} else if (strcmp(cmdString, "find") == 0
+               || strcmp(cmdString, "find\r") == 0) {
 		cmd = FIND;
-	} else if (strcmp(cmdString, "resize") == 0) {
+	} else if (strcmp(cmdString, "resize") == 0
+               || strcmp(cmdString, "resize\r") == 0) {
 		cmd = RESIZE;
-	} else if (strcmp(cmdString, "print_bucket") == 0) {
+	} else if (strcmp(cmdString, "print_bucket") == 0
+               || strcmp(cmdString, "print_bucket\r") == 0) {
 		cmd = BPRINT;
-	}
+	} else if (strcmp(cmdString, "clear") == 0
+               || strcmp(cmdString, "clear\r") == 0) {
+        cmd = CLEAR;
+    }
 
 	return cmd;
 }

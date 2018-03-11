@@ -3,7 +3,7 @@
 #ifndef TEMA1_STRUCT_H
 #define TEMA1_STRUCT_H
 
-static const char* commandNames[] = {"add", "remove", "find", "print", "bprint", "resize", "invalid" };
+static const char* commandNames[] = {"add", "remove", "find", "clear", "print", "bprint", "resize", "invalid" };
 
 static const int CODE_INVALID_HASHTABLE_SIZE = 0;
 static const int CODE_INVALID_FILENAME = 1;
