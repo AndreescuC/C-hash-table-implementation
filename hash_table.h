@@ -11,6 +11,7 @@ void find(bucket*** hashTable, int size, char *word, char* file);
 void print(bucket*** hashTable, int size, char* file);
 void printBucket(bucket*** hashTable, int bucketIndex, char* file);
 void clearTable(bucket*** hashTable, int size);
-void executeInstruction(instruction inst, bucket ***hashTable, int size);
+int resize(bucket*** hashTable, int size, char* type);
+void executeInstruction(instruction inst, bucket ***hashTable, int *size);
 
 #endif

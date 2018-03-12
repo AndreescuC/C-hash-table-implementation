@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	mockInserts(&hashTable);
 
 	for (i=0; i<nrOfInstructions; i++) {
-		executeInstruction(instructions[i], &hashTable, hashTableSize);
+		executeInstruction(instructions[i], &hashTable, &hashTableSize);
 	}
 
     char *c;

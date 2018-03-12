@@ -8,10 +8,12 @@ static const char* commandNames[] = {"add", "remove", "find", "clear", "print", 
 static const int CODE_INVALID_HASHTABLE_SIZE = 0;
 static const int CODE_INVALID_FILENAME = 1;
 static const int CODE_INVALID_INSTRUCTION = 2;
+static const int CODE_INVALID_ARGUMENT = 3;
 
 static const char MSG_INVALID_HASHTABLE_SIZE[] = "Invalid hash table size provided";
 static const char MSG_INVALID_FILENAME[] = "Invalid input filename provided";
 static const char MSG_INVALID_INSTRUCTION[] = "Invalid instruction provided";
+static const char MSG_INVALID_ARGUMENT[] = "Invalid argument provided";
 
 typedef struct bucket {
     char word[100];

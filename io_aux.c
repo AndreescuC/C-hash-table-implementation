@@ -45,7 +45,8 @@ command getCommandType(char *cmdString)
 {
 	command cmd = INVALID_COMMAND;
 
-	if (strcmp(cmdString, "add") == 0) {
+	if (strcmp(cmdString, "add") == 0
+        || strcmp(cmdString, "add\r") == 0){
 		cmd = ADD;
 	} else if (strcmp(cmdString, "remove") == 0
                || strcmp(cmdString, "remove\r") == 0) {
