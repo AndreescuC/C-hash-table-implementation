@@ -177,59 +177,59 @@ hash_table.c.s:
 	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/hash_table.c.s
 .PHONY : hash_table.c.s
 
-io_aux.o: io_aux.c.o
+io_handler.o: io_handler.c.o
 
-.PHONY : io_aux.o
-
-# target to build an object file
-io_aux.c.o:
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_aux.c.o
-.PHONY : io_aux.c.o
-
-io_aux.i: io_aux.c.i
-
-.PHONY : io_aux.i
-
-# target to preprocess a source file
-io_aux.c.i:
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_aux.c.i
-.PHONY : io_aux.c.i
-
-io_aux.s: io_aux.c.s
-
-.PHONY : io_aux.s
-
-# target to generate assembly for a file
-io_aux.c.s:
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_aux.c.s
-.PHONY : io_aux.c.s
-
-log_service.o: log_service.c.o
-
-.PHONY : log_service.o
+.PHONY : io_handler.o
 
 # target to build an object file
-log_service.c.o:
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_service.c.o
-.PHONY : log_service.c.o
+io_handler.c.o:
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_handler.c.o
+.PHONY : io_handler.c.o
 
-log_service.i: log_service.c.i
+io_handler.i: io_handler.c.i
 
-.PHONY : log_service.i
+.PHONY : io_handler.i
 
 # target to preprocess a source file
-log_service.c.i:
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_service.c.i
-.PHONY : log_service.c.i
+io_handler.c.i:
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_handler.c.i
+.PHONY : io_handler.c.i
 
-log_service.s: log_service.c.s
+io_handler.s: io_handler.c.s
 
-.PHONY : log_service.s
+.PHONY : io_handler.s
 
 # target to generate assembly for a file
-log_service.c.s:
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_service.c.s
-.PHONY : log_service.c.s
+io_handler.c.s:
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_handler.c.s
+.PHONY : io_handler.c.s
+
+log_handler.o: log_handler.c.o
+
+.PHONY : log_handler.o
+
+# target to build an object file
+log_handler.c.o:
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_handler.c.o
+.PHONY : log_handler.c.o
+
+log_handler.i: log_handler.c.i
+
+.PHONY : log_handler.i
+
+# target to preprocess a source file
+log_handler.c.i:
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_handler.c.i
+.PHONY : log_handler.c.i
+
+log_handler.s: log_handler.c.s
+
+.PHONY : log_handler.s
+
+# target to generate assembly for a file
+log_handler.c.s:
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_handler.c.s
+.PHONY : log_handler.c.s
 
 main.o: main.c.o
 
@@ -300,12 +300,12 @@ help:
 	@echo "... hash_table.o"
 	@echo "... hash_table.i"
 	@echo "... hash_table.s"
-	@echo "... io_aux.o"
-	@echo "... io_aux.i"
-	@echo "... io_aux.s"
-	@echo "... log_service.o"
-	@echo "... log_service.i"
-	@echo "... log_service.s"
+	@echo "... io_handler.o"
+	@echo "... io_handler.i"
+	@echo "... io_handler.s"
+	@echo "... log_handler.o"
+	@echo "... log_handler.i"
+	@echo "... log_handler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

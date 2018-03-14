@@ -6,8 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/cygdrive/y/SO/Tema1/debugging_aux.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/debugging_aux.c.o"
   "/cygdrive/y/SO/Tema1/hash_table.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/hash_table.c.o"
-  "/cygdrive/y/SO/Tema1/io_aux.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/io_aux.c.o"
-  "/cygdrive/y/SO/Tema1/log_service.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/log_service.c.o"
+  "/cygdrive/y/SO/Tema1/io_handler.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/io_handler.c.o"
+  "/cygdrive/y/SO/Tema1/log_handler.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/log_handler.c.o"
   "/cygdrive/y/SO/Tema1/main.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/main.c.o"
   "/cygdrive/y/SO/Tema1/struct.c" "/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir/struct.c.o"
   )

@@ -1,6 +1,6 @@
-#include "io_aux.h"
+#include "io_handler.h"
 
-int readInstructions(instruction **originalInstructions, char *filename)
+int readInstructions(instruction **originalInstructions, char *filename, int stdinFlag)
 {
 	char line[100];
 	char *token;
@@ -10,18 +10,29 @@ int readInstructions(instruction **originalInstructions, char *filename)
 
 	instruction *instructions = malloc(currentSize * sizeof(instruction));
 
-	FILE *fd = fopen(filename, "r");
-	if (fd == NULL) {
-		handleFatalError(CODE_INVALID_FILENAME, 0);
-	}
-	
+    FILE* fd;
+    if (stdinFlag) {
+        fd = stdin;
+    } else {
+        char *pos;
+        if ((pos=strchr(filename, '\r')) != NULL)
+            *pos = '\0';
+        if (strlen(filename) < 1) {
+            handleFatalError(CODE_INVALID_FILENAME);
+        }
+        fd = fopen(filename, "r");
+        if (fd == NULL) {
+            handleFatalError(CODE_INVALID_FILENAME);
+        }
+    }
+
 	while (fgets(line, sizeof(line), fd)) {
 		token = strtok(line, " \n");
 
 		instruction currentInstruction = initializeInstruction();
 		currentInstruction.command = getCommandType(token);
 		if (currentInstruction.command == INVALID_COMMAND) {
-			handleFatalError(CODE_INVALID_INSTRUCTION, lineNumber);
+			handleFatalError(CODE_INVALID_INSTRUCTION);
 		}
 		token = strtok(NULL, " \n");
 		if ( token != NULL ) {
@@ -37,6 +48,11 @@ int readInstructions(instruction **originalInstructions, char *filename)
 		instructions[lineNumber - 1] = currentInstruction;
 		lineNumber++;
 	}
+
+    if (!stdinFlag) {
+        fclose(fd);
+    }
+
 	*originalInstructions = instructions;
 	return lineNumber-1;
 }

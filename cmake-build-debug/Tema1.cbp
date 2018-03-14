@@ -92,16 +92,16 @@
 		<Unit filename="/cygdrive/y/SO/Tema1/hash_table.h">
 			<Option target="Tema1"/>
 		</Unit>
-		<Unit filename="/cygdrive/y/SO/Tema1/io_aux.c">
+		<Unit filename="/cygdrive/y/SO/Tema1/io_handler.c">
 			<Option target="Tema1"/>
 		</Unit>
-		<Unit filename="/cygdrive/y/SO/Tema1/io_aux.h">
+		<Unit filename="/cygdrive/y/SO/Tema1/io_handler.h">
 			<Option target="Tema1"/>
 		</Unit>
-		<Unit filename="/cygdrive/y/SO/Tema1/log_service.c">
+		<Unit filename="/cygdrive/y/SO/Tema1/log_handler.c">
 			<Option target="Tema1"/>
 		</Unit>
-		<Unit filename="/cygdrive/y/SO/Tema1/log_service.h">
+		<Unit filename="/cygdrive/y/SO/Tema1/log_handler.h">
 			<Option target="Tema1"/>
 		</Unit>
 		<Unit filename="/cygdrive/y/SO/Tema1/main.c">

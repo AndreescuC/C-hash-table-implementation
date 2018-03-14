@@ -16,7 +16,7 @@ static const char MSG_INVALID_INSTRUCTION[] = "Invalid instruction provided";
 static const char MSG_INVALID_ARGUMENT[] = "Invalid argument provided";
 
 typedef struct bucket {
-    char word[100];
+    char word[500];
     struct bucket *next;
     struct bucket *prev;
 }bucket;
@@ -25,8 +25,8 @@ typedef enum command {ADD, REMOVE, FIND, CLEAR, PRINT, BPRINT, RESIZE, INVALID_C
 
 typedef struct instruction {
     enum command command;
-    char arg1[10];
-    char arg2[50];
+    char arg1[100];
+    char arg2[100];
 }instruction;
 
 instruction initializeInstruction();

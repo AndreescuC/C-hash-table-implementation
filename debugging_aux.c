@@ -10,7 +10,7 @@ void printInstructions(instruction *head, int n)
 	printf("*************************PRINTING INSTRUCTIONS*************************\n\n");
 }
 
-void printHashTable(bucket **hashTable, int size)
+void printHashTable(bucket **hashTable, unsigned int size)
 {
 	int i, count;
 	bucket *puppet;

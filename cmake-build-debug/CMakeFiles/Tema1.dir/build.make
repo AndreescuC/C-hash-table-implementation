@@ -153,52 +153,52 @@ CMakeFiles/Tema1.dir/hash_table.c.o.provides: CMakeFiles/Tema1.dir/hash_table.c.
 CMakeFiles/Tema1.dir/hash_table.c.o.provides.build: CMakeFiles/Tema1.dir/hash_table.c.o
 
 
-CMakeFiles/Tema1.dir/log_service.c.o: CMakeFiles/Tema1.dir/flags.make
-CMakeFiles/Tema1.dir/log_service.c.o: ../log_service.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Tema1.dir/log_service.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tema1.dir/log_service.c.o   -c /cygdrive/y/SO/Tema1/log_service.c
+CMakeFiles/Tema1.dir/log_handler.c.o: CMakeFiles/Tema1.dir/flags.make
+CMakeFiles/Tema1.dir/log_handler.c.o: ../log_handler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Tema1.dir/log_handler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tema1.dir/log_handler.c.o   -c /cygdrive/y/SO/Tema1/log_handler.c
 
-CMakeFiles/Tema1.dir/log_service.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tema1.dir/log_service.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/y/SO/Tema1/log_service.c > CMakeFiles/Tema1.dir/log_service.c.i
+CMakeFiles/Tema1.dir/log_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tema1.dir/log_handler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/y/SO/Tema1/log_handler.c > CMakeFiles/Tema1.dir/log_handler.c.i
 
-CMakeFiles/Tema1.dir/log_service.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tema1.dir/log_service.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/y/SO/Tema1/log_service.c -o CMakeFiles/Tema1.dir/log_service.c.s
+CMakeFiles/Tema1.dir/log_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tema1.dir/log_handler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/y/SO/Tema1/log_handler.c -o CMakeFiles/Tema1.dir/log_handler.c.s
 
-CMakeFiles/Tema1.dir/log_service.c.o.requires:
+CMakeFiles/Tema1.dir/log_handler.c.o.requires:
 
-.PHONY : CMakeFiles/Tema1.dir/log_service.c.o.requires
+.PHONY : CMakeFiles/Tema1.dir/log_handler.c.o.requires
 
-CMakeFiles/Tema1.dir/log_service.c.o.provides: CMakeFiles/Tema1.dir/log_service.c.o.requires
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_service.c.o.provides.build
-.PHONY : CMakeFiles/Tema1.dir/log_service.c.o.provides
+CMakeFiles/Tema1.dir/log_handler.c.o.provides: CMakeFiles/Tema1.dir/log_handler.c.o.requires
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/log_handler.c.o.provides.build
+.PHONY : CMakeFiles/Tema1.dir/log_handler.c.o.provides
 
-CMakeFiles/Tema1.dir/log_service.c.o.provides.build: CMakeFiles/Tema1.dir/log_service.c.o
+CMakeFiles/Tema1.dir/log_handler.c.o.provides.build: CMakeFiles/Tema1.dir/log_handler.c.o
 
 
-CMakeFiles/Tema1.dir/io_aux.c.o: CMakeFiles/Tema1.dir/flags.make
-CMakeFiles/Tema1.dir/io_aux.c.o: ../io_aux.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Tema1.dir/io_aux.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tema1.dir/io_aux.c.o   -c /cygdrive/y/SO/Tema1/io_aux.c
+CMakeFiles/Tema1.dir/io_handler.c.o: CMakeFiles/Tema1.dir/flags.make
+CMakeFiles/Tema1.dir/io_handler.c.o: ../io_handler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Tema1.dir/io_handler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Tema1.dir/io_handler.c.o   -c /cygdrive/y/SO/Tema1/io_handler.c
 
-CMakeFiles/Tema1.dir/io_aux.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tema1.dir/io_aux.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/y/SO/Tema1/io_aux.c > CMakeFiles/Tema1.dir/io_aux.c.i
+CMakeFiles/Tema1.dir/io_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Tema1.dir/io_handler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/y/SO/Tema1/io_handler.c > CMakeFiles/Tema1.dir/io_handler.c.i
 
-CMakeFiles/Tema1.dir/io_aux.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tema1.dir/io_aux.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/y/SO/Tema1/io_aux.c -o CMakeFiles/Tema1.dir/io_aux.c.s
+CMakeFiles/Tema1.dir/io_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Tema1.dir/io_handler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/y/SO/Tema1/io_handler.c -o CMakeFiles/Tema1.dir/io_handler.c.s
 
-CMakeFiles/Tema1.dir/io_aux.c.o.requires:
+CMakeFiles/Tema1.dir/io_handler.c.o.requires:
 
-.PHONY : CMakeFiles/Tema1.dir/io_aux.c.o.requires
+.PHONY : CMakeFiles/Tema1.dir/io_handler.c.o.requires
 
-CMakeFiles/Tema1.dir/io_aux.c.o.provides: CMakeFiles/Tema1.dir/io_aux.c.o.requires
-	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_aux.c.o.provides.build
-.PHONY : CMakeFiles/Tema1.dir/io_aux.c.o.provides
+CMakeFiles/Tema1.dir/io_handler.c.o.provides: CMakeFiles/Tema1.dir/io_handler.c.o.requires
+	$(MAKE) -f CMakeFiles/Tema1.dir/build.make CMakeFiles/Tema1.dir/io_handler.c.o.provides.build
+.PHONY : CMakeFiles/Tema1.dir/io_handler.c.o.provides
 
-CMakeFiles/Tema1.dir/io_aux.c.o.provides.build: CMakeFiles/Tema1.dir/io_aux.c.o
+CMakeFiles/Tema1.dir/io_handler.c.o.provides.build: CMakeFiles/Tema1.dir/io_handler.c.o
 
 
 # Object files for target Tema1
@@ -207,8 +207,8 @@ Tema1_OBJECTS = \
 "CMakeFiles/Tema1.dir/main.c.o" \
 "CMakeFiles/Tema1.dir/debugging_aux.c.o" \
 "CMakeFiles/Tema1.dir/hash_table.c.o" \
-"CMakeFiles/Tema1.dir/log_service.c.o" \
-"CMakeFiles/Tema1.dir/io_aux.c.o"
+"CMakeFiles/Tema1.dir/log_handler.c.o" \
+"CMakeFiles/Tema1.dir/io_handler.c.o"
 
 # External object files for target Tema1
 Tema1_EXTERNAL_OBJECTS =
@@ -217,8 +217,8 @@ Tema1.exe: CMakeFiles/Tema1.dir/struct.c.o
 Tema1.exe: CMakeFiles/Tema1.dir/main.c.o
 Tema1.exe: CMakeFiles/Tema1.dir/debugging_aux.c.o
 Tema1.exe: CMakeFiles/Tema1.dir/hash_table.c.o
-Tema1.exe: CMakeFiles/Tema1.dir/log_service.c.o
-Tema1.exe: CMakeFiles/Tema1.dir/io_aux.c.o
+Tema1.exe: CMakeFiles/Tema1.dir/log_handler.c.o
+Tema1.exe: CMakeFiles/Tema1.dir/io_handler.c.o
 Tema1.exe: CMakeFiles/Tema1.dir/build.make
 Tema1.exe: CMakeFiles/Tema1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/y/SO/Tema1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable Tema1.exe"
@@ -233,8 +233,8 @@ CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/struct.c.o.requires
 CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/main.c.o.requires
 CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/debugging_aux.c.o.requires
 CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/hash_table.c.o.requires
-CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/log_service.c.o.requires
-CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/io_aux.c.o.requires
+CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/log_handler.c.o.requires
+CMakeFiles/Tema1.dir/requires: CMakeFiles/Tema1.dir/io_handler.c.o.requires
 
 .PHONY : CMakeFiles/Tema1.dir/requires
 

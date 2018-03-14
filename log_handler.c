@@ -1,0 +1,10 @@
+#include "log_handler.h"
+
+void handleFatalError(int code)
+{
+	DIE(code == CODE_INVALID_HASHTABLE_SIZE, MSG_INVALID_HASHTABLE_SIZE);
+	DIE(code == CODE_INVALID_FILENAME, MSG_INVALID_FILENAME);
+	DIE(code == CODE_INVALID_INSTRUCTION, MSG_INVALID_INSTRUCTION);
+	DIE(code == CODE_INVALID_ARGUMENT, MSG_INVALID_ARGUMENT);
+    DIE(1, "Fatal error, exiting\n");
+}
