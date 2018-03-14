@@ -8,7 +8,8 @@ int readInstructions(instruction **originalInstructions, char *filename, int std
 	int lineNumber = 1;
 	int currentSize = 20;
 
-	instruction *instructions = malloc(currentSize * sizeof(instruction));
+	instruction *instructions;
+    instructions = (instruction*)malloc(currentSize * sizeof(instruction));
 
     FILE* fd;
     if (stdinFlag) {
@@ -31,9 +32,7 @@ int readInstructions(instruction **originalInstructions, char *filename, int std
 
 		instruction currentInstruction = initializeInstruction();
 		currentInstruction.command = getCommandType(token);
-		if (currentInstruction.command == INVALID_COMMAND) {
-			handleFatalError(CODE_INVALID_INSTRUCTION);
-		}
+
 		token = strtok(NULL, " \n");
 		if ( token != NULL ) {
 			strcpy(currentInstruction.arg1, token);
@@ -43,7 +42,11 @@ int readInstructions(instruction **originalInstructions, char *filename, int std
 			}
 		}
 		if (lineNumber >= currentSize) {
-			instructions = realloc(instructions, (size_t)(currentSize + reallocationIncrement));
+			instructions = (instruction*)realloc(
+                    instructions,
+                    (currentSize + reallocationIncrement)* sizeof(instruction)
+            );
+            currentSize += reallocationIncrement;
 		}
 		instructions[lineNumber - 1] = currentInstruction;
 		lineNumber++;

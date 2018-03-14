@@ -29,7 +29,7 @@ void executeInstruction(instruction inst, bucket*** hashTable, unsigned int *siz
 	} else if (inst.command == PRINT) {
 		print(hashTable, sizeByValue, inst.arg1);
 	} else if (inst.command == BPRINT) {
-        printBucket(hashTable, atoi(inst.arg1), inst.arg2);
+        printBucket(hashTable, inst.arg1, inst.arg2);
     } else if (inst.command == CLEAR) {
         *hashTable = clearTable(*hashTable, sizeByValue);
 	} else if (inst.command == RESIZE) {
@@ -46,6 +46,8 @@ void addWord(bucket*** hashTable, unsigned int size, char *word)
     char *pos;
     if ((pos=strchr(word, '\r')) != NULL)
         *pos = '\0';
+    if (strlen(word) < 1)
+        handleFatalError(CODE_INVALID_ARGUMENT);
 
 	int hashIndex = hash(word, size);
 	bucket *puppet = (*hashTable)[hashIndex];
@@ -75,8 +77,13 @@ void addWord(bucket*** hashTable, unsigned int size, char *word)
 	puppet->next = newElement;
 }
 
-void printBucket(bucket*** hashTable, int bucketIndex, char* file)
+void printBucket(bucket*** hashTable, char* bucketIndexString, char* file)
 {
+    int bucketIndex = atoi(bucketIndexString);
+    if (bucketIndex == 0 &&
+                (!isdigit(bucketIndexString[0]) || strlen(bucketIndexString) != 1)) {
+        handleFatalError(CODE_INVALID_ARGUMENT);
+    }
     bucket *puppet = (*hashTable)[bucketIndex];
     char *pos;
     if ((pos=strchr(file, '\r')) != NULL)
@@ -198,10 +205,10 @@ void find(bucket*** hashTable, unsigned int size, char *word, char* file)
         if (strcmp(puppet->word, word) == 0) {
             if (strlen(file)) {
                 FILE *fd = fopen(file, "a");
-                fprintf(fd, "TRUE\n");
+                fprintf(fd, "True\n");
                 fclose(fd);
             } else {
-                printf("TRUE\n");
+                printf("True\n");
             }
             return;
         }
@@ -209,10 +216,10 @@ void find(bucket*** hashTable, unsigned int size, char *word, char* file)
     }
     if (strlen(file)) {
         FILE *fd = fopen(file, "a");
-        fprintf(fd, "FALSE\n");
+        fprintf(fd, "False\n");
         fclose(fd);
     } else {
-        printf("FALSE\n");
+        printf("False\n");
     }
 }
 

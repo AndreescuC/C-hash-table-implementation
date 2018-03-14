@@ -69,6 +69,8 @@ unistd.h
 -
 errno.h
 -
+ctype.h
+-
 
 /cygdrive/y/SO/Tema1/struct.c
 struct.h
